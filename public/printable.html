@@ -56,6 +56,38 @@ header{height:72px;border-bottom:1px solid var(--border);display:flex;align-item
 .preview-shell{width:100%}
 }
 </style>
+<style>
+/* Focused download-section layout polish */
+.crumb{max-width:960px;margin-left:auto;margin-right:auto;padding-left:0}
+.layout{max-width:960px;margin-left:auto;margin-right:auto;grid-template-columns:390px 470px;gap:60px}
+.visual-wrap{grid-template-columns:54px 300px;gap:18px;padding-left:0}
+.thumb-rail{padding-top:20px}
+.thumbs{max-height:299px}
+.preview-shell{width:300px}
+.preview{width:300px;height:424px}
+.slide-controls{width:300px}
+.info{max-width:470px;padding-top:0}
+.info h1{max-width:470px;font-size:clamp(40px,4vw,54px);line-height:.98;margin:12px 0 16px}
+.desc{max-width:440px;line-height:1.7}
+.meta{margin:18px 0}
+.download,.share{width:320px;max-width:100%}
+.download{margin-top:20px}
+.category-browser{max-width:1280px;margin-left:auto;margin-right:auto}
+@media(max-width:1000px){
+  .crumb{max-width:none}
+  .layout{max-width:none;grid-template-columns:1fr 1fr;gap:40px}
+  .visual-wrap{grid-template-columns:54px minmax(0,1fr);gap:18px}
+  .preview-shell{width:100%}
+  .preview{width:min(300px,100%);height:auto;aspect-ratio:210/297}
+  .slide-controls{width:min(300px,100%)}
+}
+@media(max-width:900px){
+  .layout{display:flex;flex-direction:column;gap:52px}
+  .visual-wrap{grid-template-columns:54px minmax(0,1fr);gap:18px}
+  .info{width:100%;max-width:none}
+  .info h1{max-width:700px}
+}
+</style>
 <style>.cat-menu-loading{font-size:12px;color:var(--muted);padding:8px 0}</style></head>
 <body>
 <header><div class="container nav"><a class="logo" href="/">EliasArts</a><nav class="nav-actions"><a class="search-link" href="/search"><svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg><span>Search</span></a><div class="cat-menu-wrap"><button class="cat-menu-btn" id="catMenuBtn" type="button" aria-expanded="false">Categories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="cat-menu" id="catMenu"><div class="cat-menu-title">Browse categories</div><div id="catMenuGrid" class="cat-menu-grid"></div></div></div></nav></div></header>
